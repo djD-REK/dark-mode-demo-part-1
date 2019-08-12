@@ -5,12 +5,8 @@ import useDarkMode from "use-dark-mode"; // Don't forget to import the NPM packa
 import "./styles.scss";
 
 function App() {
-  const darkMode = useDarkMode(false);
-
-  const getDayNightAsString = () => {
-    if (darkMode.value) return "🌕 Night";
-    else return "☀️ Day";
-  };
+  const { value, toggle } = useDarkMode(false);
+  const dayNightAsString = value ? "🌕 Night":  "☀️ Day";
 
   const emojify = () => {
     return (
@@ -26,8 +22,8 @@ function App() {
     <div className="App">
       <div className="container">
         {emojify()}
-        <h2>{getDayNightAsString()} Mode 🥳</h2>
-        <button onClick={darkMode.toggle}>
+        <h2>{dayNightAsString} Mode 🥳</h2>
+        <button onClick={toggle}>
           <h3>Toggle Day / Night</h3>
         </button>
         {emojify()}

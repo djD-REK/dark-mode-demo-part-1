@@ -52,7 +52,6 @@ body.light-mode {
   background: linear-gradient(to top,  rgba(17,28,43,1) 0%,rgba(53,55,130,1) 12%,rgba(255,102,135,1) 28%,rgba(255,185,89,1) 45%,rgba(135,224,253,1) 72%,rgba(83,203,241,1) 87%,rgba(5,171,224,1) 100%); 
 
 	color: #333;
-  transition: background-color 0.3s ease;
 
 	&::before {
 		top: -900vh;
